@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="250" viewBox="17.38 25.56 491.117 207.06">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="838" y1="363" x2="838" y2="653" id="gradient-1">
+      <stop offset="0" style="stop-color: rgb(84.706% 84.706% 84.706%)"></stop>
+      <stop offset="1" style="stop-color: rgb(48.42% 48.42% 48.42%)"></stop>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="838" cy="508" r="145" id="gradient-0">
+      <stop offset="0" style="stop-color: rgb(84.706% 84.706% 84.706%)"></stop>
+      <stop offset="1" style="stop-color: rgb(48.42% 48.42% 48.42%)"></stop>
+    </radialGradient>
+  </defs>
+  <circle style="fill-opacity: 0.45; fill: rgb(113, 203, 244); stroke-opacity: 0; stroke: rgba(255, 254, 254, 0); transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0.661019, 0.006939, -0.006758, 0.643807, -718.844055, -381.774292)" cx="838" cy="508" r="145"></circle>
+  <circle cx="120" cy="125" r="60" fill="#0077c8"></circle>
+  <rect x="110" y="95" width="20" height="60" fill="white"></rect>
+  <rect x="90" y="115" width="60" height="20" fill="white"></rect>
+  <g stroke="#66c3e9" stroke-width="2" fill="none">
+    <ellipse cx="120" cy="125" rx="93.44" ry="60"></ellipse>
+    <ellipse cx="120" cy="125" rx="60" ry="90.743" transform="rotate(45 120 125)"></ellipse>
+    <ellipse cx="120" cy="125" rx="60" ry="93.016" transform="rotate(-45 120 125)"></ellipse>
+  </g>
+  <text x="250" y="80" font-family="Arial" font-size="50" fill="#2ba4e0" font-weight="bold" style="white-space: pre;" transform="matrix(1.186383, 0, 0, 1.245455, -58.353115, 11.978419)">DESAMU</text>
+  <text x="250" y="115" font-family="Arial" font-size="20" fill="#2ba4e0" style="white-space: pre;" transform="matrix(0.838795, 0, 0, 0.792384, 30.588615, 39.553482)">Departamento de Salud Municipal</text>
+  <line x1="238.242" y1="139.314" x2="495.399" y2="139.314" stroke="#2ba4e0" stroke-width="3" style=""></line>
+  <text x="232.619" y="186.646" font-family="Arial" font-size="50" fill="#2ba4e0" font-weight="bold" style="white-space: pre; font-size: 50px;">COIHUECO</text>
+  <circle style="stroke-width: 2.28794px; stroke: rgb(102, 195, 233); fill-opacity: 0; fill: rgba(255, 255, 255, 0);" transform="matrix(0.849491, 0, 0, 1.271633, -484.872009, -565.41571)" cx="712.5" cy="543.5" r="70.5"></circle>
+  <g fill="#0077c8" transform="matrix(1.255221, 0, 0.008208, 1.255221, -32.685715, -21.215565)" style="">
+    <circle cx="120" cy="45" r="7"></circle>
+    <circle cx="120.692" cy="189.891" r="7" style="transform-box: fill-box; transform-origin: 413.698% 90.2049%;"></circle>
+    <circle cx="196.182" cy="119.964" r="7"></circle>
+    <circle cx="46.537" cy="122.038" r="7"></circle>
+    <circle cx="175.547" cy="66.481" r="7"></circle>
+    <circle cx="66.814" cy="65" r="7"></circle>
+    <circle cx="176.269" cy="166.632" r="7"></circle>
+    <circle cx="66.934" cy="166.632" r="7"></circle>
+  </g>
+</svg>

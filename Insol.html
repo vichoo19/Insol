@@ -10,7 +10,7 @@
     <header>
         <nav class="nav">
             <div class="nav-hijo">
-                <img class="logo-corner"  src="logo_insol_sin_letras.svg" alt="Insol">
+                <a href="#slider"><img class="logo-corner"  src="logo_insol_sin_letras.svg" alt="Insol"></a>
             </div>
             <div class="nav-hijo">
                 <a class="nav-link" href="#welcome-section">Nosotros</a>
@@ -20,13 +20,123 @@
         </nav>
     </header>
     <main>
-        <div class="space"></div>
         <section id ="slider">
                 <div class="fondo-oscuro"></div>
-                <img class="insol-center" id = "mainLogo" style = "view-transition-name: logo-1" src="logo_insol.svg" alt="Insol">
+                <div class = "center">
+                    <img class="i" id = "mainLogo" src="i-logo.svg" alt="Insol">
+                    <img class="nsol"  src="logo_insol.svg" alt="i-Insol">
+                </div>
                 <div class="slide s1"><img src="imagenes/img1.jpg" alt="im1"></div><div class="slide-text t1">Soldaduras con alto estándar de calidad</div>
                 <div class="slide s2"><img src="imagenes/img2.jpg" alt="im2"></div><div class="slide-text t2">Instalaciones profesionales de gasfitería</div>
                 <div class="slide s3"><img src="imagenes/img3.jpg" alt="im3"></div><div class="slide-text t3">Especialistas en climatización</div>
+        </section>
+
+        
+        <section id="servicios">
+            <h1>SERVICIOS</h1>
+            
+            <div class="servicios-botones">
+                <button onclick="mostrarServicio(1)" id="boton-toggle1">Soldadura</button>
+                <button onclick="mostrarServicio(2)" id="boton-toggle2">Gasfitería</button>
+                <button onclick="mostrarServicio(3)" id="boton-toggle3">Climatización</button>
+                <button onclick="mostrarServicio(4)" id="boton-toggle4">Salas de Calderas</button>
+            </div>
+
+            <div id="servicio1" class="servicio-detalle" style="display:none;">
+                
+                <div class="fondo-oscuro-1"></div>
+                <img src="imagenes/soldadura_fondo.jpg" alt="" class="fondo-servicio">
+                <div class="content-servicio">
+                    <div class="texto-servicio">
+                        <h2>Soldadura</h2>
+                        <p>Realizamos trabajos de soldadura especializada (eléctrica, MIG, TIG, autógena) 
+                            para estructuras metálicas, redes hidráulicas, soportes 
+                            y sistemas industriales, cumpliendo con altos estándares de calidad y precisión</p>
+                    </div>
+
+                    <img src="imagenes/soldando.png" alt="Soldadura">
+                </div>
+            </div>
+
+
+
+            <div id="servicio2" class="servicio-detalle" style="display:none;">
+                
+                <div class="fondo-oscuro-1"></div>
+                <img src="imagenes/gasfiteria_fondo.jpg" alt="" class="fondo-servicio">
+                <div class="content-servicio">
+                    <div class="texto-servicio">
+                        <h2>Gasfitería</h2>
+                        <p>Ofrecemos soluciones integrales en gasfitería para redes de agua potable, 
+                            alcantarillado, calefacción y gas, abarcando instalaciones nuevas, 
+                            reparaciones y mantenciones en todo tipo de inmuebles.</p>
+                    </div>
+
+                    <img src="imagenes/gasfiteria-servicio.jpg" alt="Gasfitería">
+                </div>
+            </div>
+
+
+
+            <div id="servicio3" class="servicio-detalle" style="display:none;">
+                
+                <div class="fondo-oscuro-1"></div>
+                <img src="imagenes/climatizacion_fondo.jpg" alt="" class="fondo-servicio">
+                <div class="content-servicio">
+                    <div class="texto-servicio">
+                        <h2>Climatización</h2>
+                        <p>Instalación y mantenimiento de sistemas de climatización, tanto para espacios residenciales
+                             como comerciales e industriales. Instalamos equipos de aire acondicionado, sistemas 
+                            VRV/VRF, y climatización centralizada, garantizando eficiencia energética y confort ambiental.</p>
+                    </div>
+
+                    <img src="imagenes/climatizacion-servicio.jpg" alt="Climatización">
+                </div>
+            </div>
+
+
+
+
+            <div id="servicio4" class="servicio-detalle" style="display:none;">
+                
+                <div class="fondo-oscuro-1"></div>
+                <img src="imagenes/SalaCaldera_fondo.jpg" alt="" class="fondo-servicio">
+                <div class="content-servicio">
+                    <div class="texto-servicio">
+                        <h2>Sala de calderas y cuadros de bomba</h2>
+                        <p>Ejecutamos proyectos completos de instalación y puesta en marcha de 
+                        salas de calderas, integrando cuadros de bomba, sistemas de control y
+                        redes hidráulicas, bajo normativas de seguridad y rendimiento técnico.</p>
+                    </div>
+
+                    <img src="imagenes/sala_de_calderas-servicio.jpg" alt="Instalación de Aire">
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+        <section id="empleadores">
+        <div class="slider1">
+            <div class="slide-track">
+                <div class="slide1"><img src="enap.svg" alt="enap"></div>
+                <div class="slide1"><img src="megasalud.svg" alt=""></div>
+                <div class="slide1"><img src="udec.svg" alt=""></div>
+                <div class="slide1"><img src="desamu.svg" alt=""></div>
+                <div class="slide1"><img src="huachipato.png" alt=""></div>
+                <div class="slide1"><img src="Logo_DuocUC.svg" alt=""></div>
+
+                <div class="slide1"><img src="enap.svg" alt="enap"></div>
+                <div class="slide1"><img src="megasalud.svg" alt=""></div>
+                <div class="slide1"><img src="udec.svg" alt=""></div>
+                <div class="slide1"><img src="desamu.svg" alt=""></div>
+                <div class="slide1"><img src="huachipato.png" alt=""></div>
+                <div class="slide1"><img src="Logo_DuocUC.svg" alt=""></div>
+            </div>
+        </div>
         </section>
         <section id="somos">
             <div class="somos-texto">
@@ -38,6 +148,8 @@
                 <p>Contamos con un equipo altamente experimentado, 
                 herramientas y equipos especializados, un enfoque constante en la seguridad 
                 laboral y un estándar de trabajo pulcro y preciso. </p>
+
+                
             </div>
             <div class="soldando">
                 <img class="soldando" src="imagenes/soldando.png" alt="soldando">

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Desplegar pestaña superior</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* La pestaña superior oculta */
+    #pestana {
+      position: fixed;
+      top: 200px; /* Oculta fuera de la vista */
+      left: 0;
+      opacity: 0;
+      right: 0;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      transition: top 0.4s ease;
+      z-index: 999;
+    }
+    /* Cuando se activa la pestaña */
+
+    /* Botón para activarla */
+    #boton-toggle {
+      margin: 50px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #boton-x{
+        background-color: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 5px 10px;
+        font-size: 16px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="boton-toggle">Mostrar Información</button>
+
+  <div id="pestana">
+    <p>¡Aquí hay información importante desde arriba!</p>
+    <button id="boton-x">X</button>
+  </div>
+
+  <script>
+    const boton = document.getElementById('boton-toggle');
+    const pestana = document.getElementById('pestana');
+    const botonX = document.getElementById('boton-x');
+
+    boton.addEventListener('click', () => {
+        pestana.style.opacity = '1';
+    });
+    botonX.addEventListener('click',()=>{
+        pestana.style.opacity='0';
+    });
+  </script>
+
+</body>
+</html>
