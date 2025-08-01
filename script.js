@@ -2,13 +2,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const cornerLogo = document.querySelector('.logo-corner');
     const headerHeight = document.querySelector('header').offsetHeight;
     const backgroundNav = document.querySelector('nav');
-    
+
     window.addEventListener('scroll', function() {
         // Calculamos cuánto se ha desplazado la página
         const scrollPosition = window.scrollY || window.pageYOffset;
         
         // Definimos un punto de activación (puedes ajustar este valor)
-        const triggerPoint = 100;
+        const triggerPoint = 50;
         
         if (scrollPosition > triggerPoint) {
         
@@ -34,6 +34,10 @@ window.addEventListener('DOMContentLoaded',() => {
         logoResto.style.opacity='1';
         logoResto.style.transform='translateX(0)';},900);
 })
+
+
+
+
 
 function mostrarServicio(num) {
     for (let i = 1; i <= 4; i++) {

@@ -13,7 +13,7 @@ body{
     font-family: sans-serif;
 }
 html{
-    background-color: hsl(0, 9%, 89%);
+    background-color: hsl(0, 8%, 93%);
     font-size:1.2em;
     color:rgb(0, 0, 0);
 }
@@ -22,6 +22,26 @@ html{
 header{
     width: 100vw;
 }
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h1::after{
+    content: "";
+    display: block;
+    width:fit-content(100%);
+    height: 3px;
+    background-color: rgb(66, 66, 181);
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+h1{
+    font-size: 2.3em;
+    color:rgb(16, 16, 16);
+    text-align: center;
+}
+/*-------------------nav_bar--------------------*/
 nav{
     position: fixed;
     display: flex;
@@ -37,7 +57,18 @@ nav{
     z-index: 4;
     box-shadow: rgba(0, 0, 0, 0.16) 3px 3px 4px;
 }
-
+.nav-link{
+    text-decoration: none;
+    color:hsl(0, 0%, 100%);
+    margin-right: 4em;
+}
+.logo-corner{
+    width:150px;
+    margin-left:30px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+/*---------------seccion portada----------------*/
 .fondo-oscuro{
     position: absolute;
     top: 0;
@@ -47,48 +78,29 @@ nav{
     z-index: 1;
 }
 
-.fondo-oscuro-1{
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.758);
-    z-index: 1;
-    border-radius: 10px;
-}
-
-.logo-corner{
-    width:150px;
-    margin-left:30px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.center *{
+.logo-center *{
     transform-origin: center;
     transition: all 1s ease;
 }
-.center{
+.logo-center{
     display: inline-flex;
     max-height: 300px;
     align-items:baseline;
     justify-content: center;
     margin-bottom: 110px; 
-
 }
 .nsol{
-    width: 700px;
+    width: 38vw;
     opacity: 0; 
     z-index:2;
     transform: translateX(-100px);
     z-index: 2;
  } 
 .i{
-    max-width: 130px;
+    width: 7vw;
     transform:translateX(270%);
     z-index:2;
 }
-
 .logo-visible{
     opacity: 1;
 }
@@ -163,75 +175,55 @@ animation-delay: 0s;
     100% { opacity: 0;  transform: translateX(150%) scale(1)}
 }
 
-.nav-link{
-    text-decoration: none;
-    color:hsl(0, 0%, 100%);
-    margin-right: 4em;
-}
-main{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+/*-------------seccion somos-----------*/
 
-.text-hemos-trabajado{
-    position: absolute;
-    z-index: 2;
-    top:90%;
-    left:auto;
-    color:white
-}
-
-.slider1{
-    width:90vw;
-    height: auto;
-    margin: auto;
-    overflow: hidden;
-}
-.slider1 .slide-track{
-    display: flex;
-    align-items: center;
-    animation: scroll 40s linear infinite;
-    -webkit-animation: scroll 40s linear infinite;
-    width:calc(260px * 12);
-}
-.slider1 .slide1{
-    width: 260px;
-    margin-right: 40px;
-}
-.slider1 .slide1 img{
+#somos{
     width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+    background-color: rgb(211, 214, 222);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-@keyframes scroll{
-    0%   { transform: translateX(0);
-    -webkit-transform: translateX(0) }
+.somos-contenido{
+    display: flex;
+    max-height: 55%;
+    align-items: center;
+    justify-content: center;
 
-    100%  { transform: translateX(calc(-200px * 6));
-    -webkit-transform: translateX(calc(-200px * 6)); }
+}
+.gente{
+    width: 25%;
+    
+
+}
+.somos-texto{
+    max-width: 40%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    text-align:justify;
+    font-size: 1.2em;
+    color: rgb(4, 3, 3);
+    margin-left: 50px;
+}
+ul li::marker{
+    content:'✅  ';
+}
+span{
+    color: rgb(31, 84, 206);
+    font-weight: 600;
 }
 
-h1{
-    font-size: 2.3em;
-    color:rgb(48, 48, 48);
-    text-align: center;
-}
-h1::after{
-    content: "";
-    display: block;
-    width: 250px;
-    height: 3px;
-    background-color: rgb(47, 47, 129);
-    margin: 0 auto;
-    margin-bottom: 10px;
-}
+
+
+/*-----------seccion servicios-----------*/
 
 #servicios{
     width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -10px;
-
 }
 .servicios-botones{
     display: flex;
@@ -239,7 +231,6 @@ h1::after{
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: -5px;
     margin-bottom: 35px;
 }
 .servicios-botones button{
@@ -252,6 +243,7 @@ h1::after{
     padding: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .servicios-botones button::after{
     content: "";
@@ -283,12 +275,14 @@ h1::after{
     height: 3px;
     background-color: rgb(25, 25, 27);
 }
-
-.servicio-detalle{
-    width: 70vw;
-    min-height: 60vh;
-    position: relative;
-    border-radius:3px;
+.fondo-oscuro-1{
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.758);
+    z-index: 1;
+    border-radius: 10px;
 }
 .fondo-servicio{
     width: 100%;
@@ -299,11 +293,16 @@ h1::after{
     opacity: 1;
     object-fit:cover;
     border-radius: 10px;
-    box-shadow: rgba(24, 25, 25, 0.2) 0px 8px 24px;
+    box-shadow: rgba(24, 25, 25, 0.2) 1px 10px 10px;
+}
+.servicio-detalle{
+    width: 70vw;
+    min-height: 60vh;
+    position: relative;
+    border-radius:3px;
 }
 
-
- .content-servicio{ /*EDITAR CON MEDIA PARA EL RESPOSIVE */
+.content-servicio{ /*EDITAR CON MEDIA PARA EL RESPOSIVE */
     position: absolute;
     height: 100%;
     width: 100%;
@@ -331,15 +330,37 @@ h2{
 }
 
 
-#somos{
+
+/*---------------seccion slider empleadores--------------*/
+#empleadores{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slider1{ 
+    width:90vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+.slider1 .slide-track{
     display: flex;
- 
-    border: 1px solid red;
+    align-items: center;
+    animation: scroll 30s linear infinite;
+    -webkit-animation: scroll 30s linear infinite;
+    width:calc(260px * 12);
 }
-.somos-texto{
-    width: 50vw;
-    
+.slider1 .slide1{
+    width: 260px;
+    padding-right: 30px;
 }
-.soldando{
-    width: 200px;
+.slider1 .slide1 img{
+    width: 100%;
+}
+@keyframes scroll{
+    0%   { transform: translateX(0);
+    -webkit-transform: translateX(0) }
+
+    100%  { transform: translateX(calc(-260px * 6));
+    -webkit-transform: translateX(calc(-260px * 6)); }
 }

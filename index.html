@@ -13,27 +13,50 @@
                 <a href="#slider"><img class="logo-corner"  src="logo_insol_sin_letras.svg" alt="Insol"></a>
             </div>
             <div class="nav-hijo">
-                <a class="nav-link" href="#welcome-section">Nosotros</a>
-                <a class="nav-link" href="#projects">Proyectos</a>
+                <a class="nav-link" href="#somos">Nosotros</a>
+                <a class="nav-link" href="#servicios">Servicios</a>
                 <a class="nav-link" href="#contact">Contacto</a>
             </div>
         </nav>
     </header>
     <main>
-        <section id ="slider">
+
+
+        <section id ="slider"><!--seccion portada-->
                 <div class="fondo-oscuro"></div>
-                <div class = "center">
-                    <img class="i" id = "mainLogo" src="i-logo.svg" alt="Insol">
-                    <img class="nsol"  src="logo_insol.svg" alt="i-Insol">
+                <div class = "logo-center">
+                    <img class="i" src="i-logo.svg" alt="i-Insol">
+                    <img class="nsol"  src="logo_insol.svg" alt="nsol">
                 </div>
                 <div class="slide s1"><img src="imagenes/img1.jpg" alt="im1"></div><div class="slide-text t1">Soldaduras con alto estándar de calidad</div>
                 <div class="slide s2"><img src="imagenes/img2.jpg" alt="im2"></div><div class="slide-text t2">Instalaciones profesionales de gasfitería</div>
                 <div class="slide s3"><img src="imagenes/img3.jpg" alt="im3"></div><div class="slide-text t3">Especialistas en climatización</div>
         </section>
 
-        
-        <section id="servicios">
-            <h1>SERVICIOS</h1>
+
+
+         <section id="somos"> <!--seccion quienes somos-->
+            <h1 class="titulo-blanco">Quiénes somos</h1>
+            <div class="somos-contenido">
+                <svg class="gente" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M320 64C355.3 64 384 92.7 384 128C384 163.3 355.3 192 320 192C284.7 192 256 163.3 256 128C256 92.7 284.7 64 320 64zM416 376C416 401 403.3 423 384 435.9L384 528C384 554.5 362.5 576 336 576L304 576C277.5 576 256 554.5 256 528L256 435.9C236.7 423 224 401 224 376L224 336C224 283 267 240 320 240C373 240 416 283 416 336L416 376zM160 96C190.9 96 216 121.1 216 152C216 182.9 190.9 208 160 208C129.1 208 104 182.9 104 152C104 121.1 129.1 96 160 96zM176 336L176 368C176 400.5 188.1 430.1 208 452.7L208 528C208 529.2 208 530.5 208.1 531.7C199.6 539.3 188.4 544 176 544L144 544C117.5 544 96 522.5 96 496L96 439.4C76.9 428.4 64 407.7 64 384L64 352C64 299 107 256 160 256C172.7 256 184.8 258.5 195.9 262.9C183.3 284.3 176 309.3 176 336zM432 528L432 452.7C451.9 430.2 464 400.5 464 368L464 336C464 309.3 456.7 284.4 444.1 262.9C455.2 258.4 467.3 256 480 256C533 256 576 299 576 352L576 384C576 407.7 563.1 428.4 544 439.4L544 496C544 522.5 522.5 544 496 544L464 544C451.7 544 440.4 539.4 431.9 531.7C431.9 530.5 432 529.2 432 528zM480 96C510.9 96 536 121.1 536 152C536 182.9 510.9 208 480 208C449.1 208 424 182.9 424 152C424 121.1 449.1 96 480 96z"/></svg>
+                <div class="somos-texto">
+                    <ul>
+                    <li><p>Especialistas en servicios de <span>soldadura, gasfitería y climatización, </span>
+                    incluyendo la instalación de <span>sistemas de aire acondicionado</span> y <span>calefacción 
+                    central.</span> </p></li>
+                    <li><p>Contamos con un equipo altamente experimentado, 
+                    herramientas y equipos especializados, un enfoque constante en la seguridad 
+                    laboral y estándares laborales de excelente calidad.</p></li>
+                    <li><p>Atendemos a una amplia gama de clientes, desde <span>edificios corporativos, 
+                    hospitales, universidades, colegios y supermercados, hasta viviendas particulares.</span></p></li>
+                </ul></div>
+            </div>
+        </section>
+
+
+
+        <section id="servicios"><!--seccion servicios-->
+            <h1>Servicios</h1>
             
             <div class="servicios-botones">
                 <button onclick="mostrarServicio(1)" id="boton-toggle1">Soldadura</button>
@@ -43,7 +66,6 @@
             </div>
 
             <div id="servicio1" class="servicio-detalle" style="display:none;">
-                
                 <div class="fondo-oscuro-1"></div>
                 <img src="imagenes/soldadura_fondo.jpg" alt="" class="fondo-servicio">
                 <div class="content-servicio">
@@ -53,15 +75,11 @@
                             para estructuras metálicas, redes hidráulicas, soportes 
                             y sistemas industriales, cumpliendo con altos estándares de calidad y precisión</p>
                     </div>
-
                     <img src="imagenes/soldando.png" alt="Soldadura">
                 </div>
             </div>
 
-
-
             <div id="servicio2" class="servicio-detalle" style="display:none;">
-                
                 <div class="fondo-oscuro-1"></div>
                 <img src="imagenes/gasfiteria_fondo.jpg" alt="" class="fondo-servicio">
                 <div class="content-servicio">
@@ -71,15 +89,11 @@
                             alcantarillado, calefacción y gas, abarcando instalaciones nuevas, 
                             reparaciones y mantenciones en todo tipo de inmuebles.</p>
                     </div>
-
                     <img src="imagenes/gasfiteria-servicio.jpg" alt="Gasfitería">
                 </div>
             </div>
 
-
-
             <div id="servicio3" class="servicio-detalle" style="display:none;">
-                
                 <div class="fondo-oscuro-1"></div>
                 <img src="imagenes/climatizacion_fondo.jpg" alt="" class="fondo-servicio">
                 <div class="content-servicio">
@@ -89,16 +103,11 @@
                              como comerciales e industriales. Instalamos equipos de aire acondicionado, sistemas 
                             VRV/VRF, y climatización centralizada, garantizando eficiencia energética y confort ambiental.</p>
                     </div>
-
                     <img src="imagenes/climatizacion-servicio.jpg" alt="Climatización">
                 </div>
             </div>
 
-
-
-
             <div id="servicio4" class="servicio-detalle" style="display:none;">
-                
                 <div class="fondo-oscuro-1"></div>
                 <img src="imagenes/SalaCaldera_fondo.jpg" alt="" class="fondo-servicio">
                 <div class="content-servicio">
@@ -108,19 +117,15 @@
                         salas de calderas, integrando cuadros de bomba, sistemas de control y
                         redes hidráulicas, bajo normativas de seguridad y rendimiento técnico.</p>
                     </div>
-
                     <img src="imagenes/sala_de_calderas-servicio.jpg" alt="Instalación de Aire">
                 </div>
             </div>
-
-
         </section>
 
 
-
-
-        <section id="empleadores">
-        <div class="slider1">
+        <section id="empleadores"><!--seccion empleadores-->
+            <h1>Hemos trabajado con:</h1>
+            <div class="slider1">
             <div class="slide-track">
                 <div class="slide1"><img src="enap.svg" alt="enap"></div>
                 <div class="slide1"><img src="megasalud.svg" alt=""></div>
@@ -128,7 +133,6 @@
                 <div class="slide1"><img src="desamu.svg" alt=""></div>
                 <div class="slide1"><img src="huachipato.png" alt=""></div>
                 <div class="slide1"><img src="Logo_DuocUC.svg" alt=""></div>
-
                 <div class="slide1"><img src="enap.svg" alt="enap"></div>
                 <div class="slide1"><img src="megasalud.svg" alt=""></div>
                 <div class="slide1"><img src="udec.svg" alt=""></div>
@@ -137,23 +141,6 @@
                 <div class="slide1"><img src="Logo_DuocUC.svg" alt=""></div>
             </div>
         </div>
-        </section>
-        <section id="somos">
-            <div class="somos-texto">
-                <h1>Quiénes somos</h1>
-                <p class="somos-des">
-                Especialistas en servicios de soldadura, gasfitería y climatización, 
-                incluyendo la instalación brde sistemas de aire acondicionado y calefacción 
-                central. </p>
-                <p>Contamos con un equipo altamente experimentado, 
-                herramientas y equipos especializados, un enfoque constante en la seguridad 
-                laboral y un estándar de trabajo pulcro y preciso. </p>
-
-                
-            </div>
-            <div class="soldando">
-                <img class="soldando" src="imagenes/soldando.png" alt="soldando">
-            </div>
         </section>
     </main>
     <script src="script.js"></script>
