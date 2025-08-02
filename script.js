@@ -1,3 +1,4 @@
+// ---------------------ANIMACION NAV BAR-----------------
 document.addEventListener('DOMContentLoaded', function() {
     const cornerLogo = document.querySelector('.logo-corner');
     const headerHeight = document.querySelector('header').offsetHeight;
@@ -25,6 +26,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// ---------------------DESMARCAR CHECK BOX-----------------
+document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link, .logo-corner");
+        const check = document.getElementById("check");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                check.checked = false; // Cierra el menú al hacer clic en cualquier link
+            });
+        });
+    });
+// ---------------------ANIMACION LOGO-----------------
 window.addEventListener('DOMContentLoaded',() => {
     const logoResto = document.querySelector('.nsol');
     const logoI = document.querySelector('.i');
@@ -35,16 +48,29 @@ window.addEventListener('DOMContentLoaded',() => {
         logoResto.style.transform='translateX(0)';},900);
 })
 
+// ---------------------ANIMACION SECCION SOMOS-----------------
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.3 // activa la animación cuando el 20% del elemento está visible
+  });
 
+  document.querySelectorAll('.somos-contenido').forEach(item => {
+    observer.observe(item);
+  });
 
-
-
+// ---------------------ANIMACION MOSTRAR SERVICIOS-----------------
 function mostrarServicio(num) {
     for (let i = 1; i <= 4; i++) {
         document.getElementById('servicio' + i).style.display = (i === num) ? 'block' : 'none';
+        document.getElementById('fotos' + i).style.display = (i === num) ? 'block' : 'none';
     }
 }
-
+// ---------------------BOTONES SERVICIOS-----------------
 for (let i = 1; i <= 4; i++) {
     const botonToggle = document.getElementById('boton-toggle' + i);
     botonToggle.addEventListener('click', () => {
@@ -57,8 +83,47 @@ for (let i = 1; i <= 4; i++) {
         botonToggle.classList.toggle('active');
     });
 }
-
-
 window.onload = function() {
     mostrarServicio(1);
 };
+// ---------------------LIHGTBOX-----------------
+const galeriaImagenes = {
+    soldadura: [
+    "imagenes/soldando.png",
+    "imagenes/gasfiteria-servicio.jpg",
+    "imagenes/climatizacion-servicio.jpg",
+    "imagenes/sala_de_calderas-servicio.jpg"],
+
+    gasfiteria: 
+    ["imagenes/gasfiteria1.jpg",
+    "imagenes/gasfiteria2.jpg",]
+};
+
+let galeriaActual = null;
+let indiceActual = 0;
+let startX = 0;
+let isDragging = false;
+
+function abrirLightbox(nombreGaleria, index) {
+  galeriaActual = nombreGaleria;
+  indiceActual = index;
+  document.getElementById('lightbox').style.display = 'block';
+  actualizarImagen();
+}
+
+function cerrarLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+function cambiarImagen(direccion) {
+  const galeria = galeriaImagenes[galeriaActual];
+  indiceActual = (indiceActual + direccion + galeria.length) % galeria.length;
+  actualizarImagen();
+}
+
+function actualizarImagen() {
+  const galeria = galeriaImagenes[galeriaActual];
+  const img = document.getElementById('imagenAmpliada');
+  img.src = galeria[indiceActual];
+}
+

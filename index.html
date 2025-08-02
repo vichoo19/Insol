@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Insol.css">
+    <link rel="icon" href="i-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>Insol</title>
 </head>
 <body>
     <header>
         <nav class="nav">
-            <div class="nav-hijo">
+            <div class="nav-hijo logo-wrapper">
                 <a href="#slider"><img class="logo-corner"  src="logo_insol_sin_letras.svg" alt="Insol"></a>
             </div>
             <div class="nav-hijo">
-                <a class="nav-link" href="#somos">Nosotros</a>
-                <a class="nav-link" href="#servicios">Servicios</a>
-                <a class="nav-link" href="#contact">Contacto</a>
+                <input type="checkbox" id="check">
+                    <label for="check" class="menu-toggle">
+                        &#9776;
+                    </label>
+                </input>
+                <div class="nav-links">
+                    <a class="nav-link" href="#somos">Nosotros</a>
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                    <a class="nav-link" href="#prevencion">Prevención</a>
+                    <a class="nav-link" href="#contact">Contacto</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -55,7 +65,7 @@
 
 
 
-        <section id="servicios"><!--seccion servicios-->
+        <section id="servicios" class="servicios"><!--seccion servicios-->
             <h1>Servicios</h1>
             
             <div class="servicios-botones">
@@ -66,19 +76,18 @@
             </div>
 
             <div id="servicio1" class="servicio-detalle" style="display:none;">
-                <div class="fondo-oscuro-1"></div>
-                <img src="imagenes/soldadura_fondo.jpg" alt="" class="fondo-servicio">
-                <div class="content-servicio">
-                    <div class="texto-servicio">
-                        <h2>Soldadura</h2>
-                        <p>Realizamos trabajos de soldadura especializada (eléctrica, MIG, TIG, autógena) 
-                            para estructuras metálicas, redes hidráulicas, soportes 
-                            y sistemas industriales, cumpliendo con altos estándares de calidad y precisión</p>
+                    <div class="fondo-oscuro-1"></div>
+                    <img src="imagenes/soldadura_fondo.jpg" alt="" class="fondo-servicio">
+                    <div class="content-servicio">
+                        <div class="texto-servicio">
+                            <h2>Soldadura</h2>
+                            <p>Realizamos trabajos de soldadura especializada (eléctrica, MIG, TIG, autógena) 
+                                para estructuras metálicas, redes hidráulicas, soportes 
+                                y sistemas industriales, cumpliendo con altos estándares de calidad y precisión</p>
+                        </div>
+                        <img src="imagenes/soldando.png" alt="Soldadura">
                     </div>
-                    <img src="imagenes/soldando.png" alt="Soldadura">
-                </div>
             </div>
-
             <div id="servicio2" class="servicio-detalle" style="display:none;">
                 <div class="fondo-oscuro-1"></div>
                 <img src="imagenes/gasfiteria_fondo.jpg" alt="" class="fondo-servicio">
@@ -111,13 +120,47 @@
                 <div class="fondo-oscuro-1"></div>
                 <img src="imagenes/SalaCaldera_fondo.jpg" alt="" class="fondo-servicio">
                 <div class="content-servicio">
-                    <div class="texto-servicio">
+                   <div class="texto-servicio">
                         <h2>Sala de calderas y cuadros de bomba</h2>
                         <p>Ejecutamos proyectos completos de instalación y puesta en marcha de 
                         salas de calderas, integrando cuadros de bomba, sistemas de control y
                         redes hidráulicas, bajo normativas de seguridad y rendimiento técnico.</p>
                     </div>
-                    <img src="imagenes/sala_de_calderas-servicio.jpg" alt="Instalación de Aire">
+                    <img src="imagenes/sala_de_calderas-servicio.jpg" alt="Instalación de Aire"> 
+                </div>
+            </div>
+
+            <div class="galeria-servicios">
+                <div id="fotos1" class="fotos-servicios" data-galeria="soldadura" style="display:none;">
+                    <div class="galeria-contenedor-servicio">
+                        <img src="imagenes/soldando.png" class="miniatura" onclick="abrirLightbox('soldadura',0)">
+                        <img src="imagenes/gasfiteria-servicio.jpg" class="miniatura" onclick="abrirLightbox('soldadura',1)">
+                        <img src="imagenes/climatizacion-servicio.jpg" class="miniatura" onclick="abrirLightbox('soldadura',2)">
+                        <img src="imagenes/sala_de_calderas-servicio.jpg" class="miniatura" onclick="abrirLightbox('soldadura',3)">
+                    </div>
+                </div>
+
+                <div id="fotos2" class="fotos-servicios" data-galeria="gasfiteria" style="display:none;">
+                    <div class="galeria-contenedor-servicio">
+                        <img src="imagenes/gasfiteria1.jpg" class="miniatura" onclick="abrirLightbox('gasfiteria',0)">
+                        <img src="imagenes/gasfiteria2.jpg" class="miniatura" onclick="abrirLightbox('gasfiteria',1)">
+                    </div>
+                </div>
+
+                <div id="fotos3" class="fotos-servicios" style="display:none;">
+                    fotos 3
+                </div>
+
+                <div id="fotos4" class="fotos-servicios" style="display:none;">
+                    fotos 4
+                </div>
+
+
+                <div id="lightbox" class="lightbox">
+                        <span class="cerrar" onclick="cerrarLightbox()">×</span>
+                        <img id="imagenAmpliada" class="imagen-ampliada" draggable="false">
+                        <a class="prev" onclick="cambiarImagen(-1)">❮</a>
+                        <a class="next" onclick="cambiarImagen(1)">❯</a>
                 </div>
             </div>
         </section>
@@ -144,5 +187,6 @@
         </section>
     </main>
     <script src="script.js"></script>
+
 </body>
 </html>
