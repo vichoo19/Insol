@@ -34,10 +34,12 @@
 
         <section id ="slider"><!--seccion portada-->
                 <div class="fondo-oscuro"></div>
+                
                 <div class = "logo-center">
                     <img class="i" src="i-logo.svg" alt="i-Insol">
                     <img class="nsol"  src="logo_insol.svg" alt="nsol">
                 </div>
+    
                 <div class="slide s1"><img src="imagenes/img1.jpg" alt="im1"></div><div class="slide-text t1">Soldaduras con alto estándar de calidad</div>
                 <div class="slide s2"><img src="imagenes/img2.jpg" alt="im2"></div><div class="slide-text t2">Instalaciones profesionales de gasfitería</div>
                 <div class="slide s3"><img src="imagenes/img3.jpg" alt="im3"></div><div class="slide-text t3">Especialistas en climatización</div>
@@ -75,7 +77,7 @@
                 <button onclick="mostrarServicio(4)" id="boton-toggle4">Salas de Calderas</button>
             </div>
 
-            <div id="servicio1" class="servicio-detalle" style="display:none;">
+            <div id="servicio1" class="servicio-detalle" ">
                     <div class="fondo-oscuro-1"></div>
                     <img src="imagenes/soldadura_fondo.jpg" alt="" class="fondo-servicio">
                     <div class="content-servicio">
@@ -88,7 +90,7 @@
                         <img src="imagenes/soldando.png" alt="Soldadura">
                     </div>
             </div>
-            <div id="servicio2" class="servicio-detalle" style="display:none;">
+            <div id="servicio2" class="servicio-detalle">
                 <div class="fondo-oscuro-1"></div>
                 <img src="imagenes/gasfiteria_fondo.jpg" alt="" class="fondo-servicio">
                 <div class="content-servicio">
@@ -137,6 +139,7 @@
                         <img src="imagenes/gasfiteria-servicio.jpg" class="miniatura" onclick="abrirLightbox('soldadura',1)">
                         <img src="imagenes/climatizacion-servicio.jpg" class="miniatura" onclick="abrirLightbox('soldadura',2)">
                         <img src="imagenes/sala_de_calderas-servicio.jpg" class="miniatura" onclick="abrirLightbox('soldadura',3)">
+                        <img src="imagenes/soldando2.jpg" class="miniatura" onclick="abrirLightbox('soldadura',4)">
                     </div>
                 </div>
 

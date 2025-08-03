@@ -92,7 +92,9 @@ const galeriaImagenes = {
     "imagenes/soldando.png",
     "imagenes/gasfiteria-servicio.jpg",
     "imagenes/climatizacion-servicio.jpg",
-    "imagenes/sala_de_calderas-servicio.jpg"],
+    "imagenes/sala_de_calderas-servicio.jpg",
+    "imagenes/soldando2.jpg"
+    ],
 
     gasfiteria: 
     ["imagenes/gasfiteria1.jpg",
@@ -107,7 +109,7 @@ let isDragging = false;
 function abrirLightbox(nombreGaleria, index) {
   galeriaActual = nombreGaleria;
   indiceActual = index;
-  document.getElementById('lightbox').style.display = 'block';
+  document.getElementById('lightbox').style.display = 'flex';
   actualizarImagen();
 }
 
