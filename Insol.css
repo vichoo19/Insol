@@ -16,6 +16,8 @@ html{
     background-color: hsl(0, 8%, 93%);
     font-size:1.2em;
     color:rgb(0, 0, 0);
+    overflow-x: hidden;
+    width: 100vw;
 }
 header{
     width: 100vw;
@@ -57,12 +59,16 @@ nav{
 }
 .menu-toggle{
     display: none;
+    position: fixed;
+    top:3px;
+    right: 10px;
     font-size: 2em;
     color: white;
     background-color: transparent;
     border: none;
     cursor: pointer;
     margin-right: 2vw;
+    z-index:100;
 }
 #check{
     display: none;
@@ -89,6 +95,7 @@ nav{
     width: 100%;
     overflow: hidden;
     height: 850px;
+    min-height: 70vh;
 }
 .fondo-oscuro{
     position: absolute;
@@ -108,7 +115,8 @@ nav{
     max-height: 300px;
     align-items:baseline;
     justify-content: center;
-    margin-bottom: 110px; 
+    margin-bottom:90px;
+
 }
 .nsol{
     width: 38vw;
@@ -132,12 +140,14 @@ nav{
     width: 100%;
     opacity: 0;
     animation: fade 18s infinite;
+    min-height: 70vh;
 }
 .slide img {
   width: 100%;
   height: 850px;
   display: block;
   object-fit:cover;
+  min-height: 70vh;
 }
 
 .s1 {
@@ -155,12 +165,10 @@ animation-delay: 0s;
     opacity: 0;
     transform: translateX(-50%);
     color: white;
-    font-size: 2em;
+    font-size: 2.2vw;
     z-index: 2;
     text-align: center;
-    width: 80%;
     animation: textFade 18s infinite;
-    bottom:34%;
     left:50%;
 }
 .t1{
@@ -192,7 +200,6 @@ animation-delay: 0s;
 
 #somos{
     width: 100%;
-    min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -300,7 +307,7 @@ span{
     position: relative;
     border-radius: 3px;
     overflow: hidden; /* evita que se desborde el contenido */
-    margin-bottom:20px;
+    margin: 0 10px 20px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -411,6 +418,7 @@ h2{
 .cerrar{top:20px;right:30px;font-size:50px;}
 .prev{top:50%;left:30px;transform: translateY(-50%);}
 .next{top:50%;right:30px;transform: translateY(-50%);}
+
 /*---------------seccion slider empleadores--------------*/
 #empleadores{
     display:flex;
@@ -428,7 +436,7 @@ h2{
     align-items: center;
     animation: scroll 30s linear infinite;
     -webkit-animation: scroll 30s linear infinite;
-    width:calc(260px * 12);
+    width:calc(260px * 14);
 }
 .slider1 .slide1{
     width: 260px;
@@ -437,13 +445,94 @@ h2{
 .slider1 .slide1 img{
     width: 100%;
 }
+
 @keyframes scroll{
     0%   { transform: translateX(0);
     -webkit-transform: translateX(0) }
 
-    100%  { transform: translateX(calc(-260px * 6));
-    -webkit-transform: translateX(calc(-260px * 6)); }
+    100%  { transform: translateX(calc(-260px * 7));
+    -webkit-transform: translateX(calc(-260px * 7)); }
 }
+
+/* --------------CONTACTO--------------------- */
+#contacto{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(211, 214, 222);
+    justify-content:center;
+}
+legend{
+    font-size: 20px;
+    align-self: center;
+    color: #274bdc;
+    text-align: center;
+}
+form{
+    padding:20px 55px 50px  55px;
+    border-radius: 20px;
+    text-align: center;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+}
+.link-contacto{
+    text-decoration: none;
+    color:rgb(46, 46, 48)
+}
+.contacto-iconos{
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+}
+.contacto-icono{
+    font-size: 1.3em;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+    width: 100%;
+}
+label{
+    color: rgb(63, 62, 62);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #bbb7b7;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #e8e9eb;
+    color:black;
+    outline:none;
+    resize: vertical;
+}
+input::placeholder, textarea::placeholder{
+    color: #7b7878;
+}
+.btn-submit{
+    background-color: rgb(47, 47, 129);
+    max-width: 200px;
+    align-self: center;
+    color: white;
+    font-weight: 700;
+    height: 50px;
+}
+.btn-submit:hover{
+    background-color: rgb(43, 43, 176);
+    box-shadow: 0 0 20px 5px rgba(43, 43, 176, 0.5);
+    border:none;
+}
+
+/* ------------------RESPONSIVE------------------- */
+
 
 @media screen and (max-width: 768px) {
     .somos-contenido, .content-servicio{
@@ -462,24 +551,56 @@ h2{
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 93vh;
+        height: 100vh;
         left:-100%;
-        top:7%;
+        top:0%;
         background:rgb(43, 62, 80);
         text-align: center;
-        transition: all 0.3s ease;
+        transition: left 0.3s ease;
         padding: 10px;
     }
     .nav-link{
         margin: 30px 0;
         font-size: 1.5em;
     }
+  
     #check:checked ~ .nav-links{
         left: 0;
     }
+    #check:checked ~ .espacio-azul{
+        left: 0;
+    }
+    form, textarea{
+    width: 100%; 
+    }
+    .contacto-iconos{
+    width: 80%;
+    flex-wrap:wrap;
+    justify-content: center;
+    }
+    .contacto-iconos a{
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 }
-
 @media screen and (max-width: 600px) {
+    .slider1 .slide-track{
+    animation: scroll 20s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
+    width:calc(260px * 14);
+    }
+    .slider1 .slide1{
+    width: 200px;
+    padding-right: 20px;
+    }
+    @keyframes scroll{
+    0%   { transform: translateX(0);
+    -webkit-transform: translateX(0) }
+
+    100%  { transform: translateX(calc(-200px * 7));
+    -webkit-transform: translateX(calc(-200px * 7)); }
+    }
+
     .galeria-servicios{
         max-width: 100%;
     }
@@ -500,15 +621,16 @@ h2{
     width: 35vw;
     height: 200px;
   }
+  .slide-text {
+    font-size: 7vw;
+    margin-top:7px;
+    width: 80%;
+    }
 }
-
 
 @media screen and (max-width: 400px) {
     .logo-corner{
         width: 120px;
-    }
-    .logo-center{
-        margin-bottom: 80px;
     }
     .nsol{
         width: 50vw;
@@ -521,16 +643,10 @@ h2{
         margin: 20px;
     }
     .servicios-botones button{
-        width: 200px;
-        font-size: 1.1em;
+        width: 150px;
+        font-size: .8em;
     }
-    .slide-text {
-    font-size: 1.2em;
-    z-index: 2;
-    text-align: center;
-    width: 80%;
-    bottom:42%;
-    }
+    
     h1{
         font-size: 1.8em;
         max-width: 85%;
@@ -550,4 +666,7 @@ h2{
     min-width: 150px;
     height: 150px;
     }  
+    .menu-toggle{
+        top:0px
+    }
 }

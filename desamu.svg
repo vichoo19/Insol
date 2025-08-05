@@ -9,7 +9,7 @@
       <stop offset="1" style="stop-color: rgb(48.42% 48.42% 48.42%)"></stop>
     </radialGradient>
   </defs>
-  <circle style="fill-opacity: 0.45; fill: rgb(113, 203, 244); stroke-opacity: 0; stroke: rgba(255, 254, 254, 0); transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0.661019, 0.006939, -0.006758, 0.643807, -718.844055, -381.774292)" cx="838" cy="508" r="145"></circle>
+  <circle style="fill-opacity: 0.45; stroke-opacity: 0; stroke: rgba(255, 254, 254, 0); transform-box: fill-box; transform-origin: 50% 50%; fill: rgba(113, 203, 244, 0.61);" transform="matrix(0.661019, 0.006939, -0.006758, 0.643807, -718.844055, -381.774292)" cx="838" cy="508" r="145"></circle>
   <circle cx="120" cy="125" r="60" fill="#0077c8"></circle>
   <rect x="110" y="95" width="20" height="60" fill="white"></rect>
   <rect x="90" y="115" width="60" height="20" fill="white"></rect>

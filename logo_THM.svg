@@ -1,0 +1,14 @@
+<svg width="300" height="110" viewBox="60.13 121.525 434.397 144.223" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="65.49 259.381 143.224 147.361 151.495 163.575 84.923 259.381" fill="#A9BCC3" style=""></polygon>
+  <text x="20" y="300" font-family="Georgia, serif" font-size="30" fill="#447C9E" letter-spacing="2" style="white-space: pre;" transform="matrix(0.79846, 0, 0, 2.106886, 248.979431, -447.540863)">TMH</text>
+  <text style="fill: rgb(45, 144, 185); font-family: &quot;Agency FB&quot;; font-size: 22px; white-space: pre;" transform="matrix(1.630396, 0, 0, 1.071804, 152.655731, -138.903656)" x="110" y="300">INGENIERIA</text>
+  <text x="30" y="325" font-family="Georgia, serif" font-size="12" fill="#447C9E" letter-spacing="2" style="white-space: pre;" transform="matrix(0.922147, 0, 0, 1.394185, 196.761673, -262.76474)"><tspan x="30" dy="1em">​</tspan>    CLIMATIZACION  TURBOMECANICA<tspan x="30" dy="1em">​</tspan>  </text>
+  <text x="283.214" y="227.466" font-family="Georgia, serif" font-size="12" fill="#447C9E" letter-spacing="2" style="white-space: pre; font-size: 12px;" transform="matrix(0.922147, 0, 0, 1.394185, 13.980116, -88.686661)">
+    OBRAS CIVILES
+  </text>
+  <polygon points="95.446 259.38 155.973 172.241 164.076 188.138 114.879 259.38" fill="#A9BCC3" style="stroke-width: 1;"></polygon>
+  <polygon points="140.531 125.066 183.971 210.054 203.402 210.032 159.852 125.066" style="stroke-width: 1; fill: rgb(24, 121, 160); transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(-1, 0, 0, -1, 0.000009, 0.000001)"></polygon>
+  <polygon points="161.922 114.045 201.987 192.531 221.431 192.525 181.243 114.045" style="stroke-width: 1; fill: rgb(24, 121, 160); transform-origin: 196.087px 162.069px;" transform="matrix(-1, 0, 0, -1, 0, -0.000004)"></polygon>
+  <path style="fill: rgb(68, 187, 215); stroke-width: 1; transform-origin: 199.504px 265.257px;" d="M 157.808 219.305 L 148.009 234.639 L 243.305 234.752 L 254.017 219.237 L 157.808 219.305 Z"></path>
+  <path style="stroke-width: 1; fill: rgb(68, 187, 215); transform-origin: 181.968px 288.996px;" d="M 140.272 243.044 L 130.27 258.581 L 214.676 258.521 L 225.33 243.035 L 140.272 243.044 Z"></path>
+</svg>

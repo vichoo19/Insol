@@ -25,18 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-// ---------------------DESMARCAR CHECK BOX-----------------
-document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(".nav-link, .logo-corner");
-        const check = document.getElementById("check");
-
-        navLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                check.checked = false; // Cierra el menú al hacer clic en cualquier link
-            });
-        });
-    });
 // ---------------------ANIMACION LOGO-----------------
 window.addEventListener('DOMContentLoaded',() => {
     const logoResto = document.querySelector('.nsol');
@@ -46,7 +34,7 @@ window.addEventListener('DOMContentLoaded',() => {
     setTimeout(()=> {
         logoResto.style.opacity='1';
         logoResto.style.transform='translateX(0)';},900);
-})
+});
 
 // ---------------------ANIMACION SECCION SOMOS-----------------
   const observer = new IntersectionObserver((entries) => {
