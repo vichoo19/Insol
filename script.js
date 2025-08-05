@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cornerLogo = document.querySelector('.logo-corner');
     const headerHeight = document.querySelector('header').offsetHeight;
     const backgroundNav = document.querySelector('nav');
-
+    const whatsapp = document.querySelector('.whatsapp');
     window.addEventListener('scroll', function() {
         // Calculamos cuánto se ha desplazado la página
         const scrollPosition = window.scrollY || window.pageYOffset;
@@ -17,11 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
             cornerLogo.classList.add('logo-visible');
 
             backgroundNav.classList.add('background-nav');
+
+            whatsapp.style.right = '30px';
         } 
         else {
             cornerLogo.classList.remove('logo-visible');
 
             backgroundNav.classList.remove('background-nav');
+
+            whatsapp.style.right='-70px'
         }
     });
 });
