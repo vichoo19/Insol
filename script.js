@@ -25,6 +25,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+// ---------------------QUITAR CHEK MARA MENU-----------------
+document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const check = document.getElementById("check");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                check.checked = false; // Cierra el menú al hacer clic en cualquier link
+            });
+        });
+    });
 // ---------------------ANIMACION LOGO-----------------
 window.addEventListener('DOMContentLoaded',() => {
     const logoResto = document.querySelector('.nsol');
