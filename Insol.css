@@ -97,6 +97,54 @@ nav{
     height: 850px;
     min-height: 70vh;
 }
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-arrow.prev1 {
+    left: 20px;
+}
+
+.nav-arrow.next1  {
+    right: 20px;
+}
+
+.manual-slide {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+.manual-slide.active {
+  opacity: 1 !important;
+  transition: opacity 0.6s ease;
+}
+
+.manual-text {
+  animation: none !important;
+  opacity: 0 !important;
+  transform: translateX(-50%);
+}
+
+.manual-text.active {
+  opacity: 1 !important;
+  transform: translateX(-50%) scale(1.05);
+  transition: all 0.6s ease;
+}
+
 .whatsapp-inicio{
     scale:2.5
 }
@@ -138,7 +186,7 @@ nav{
     max-height: 300px;
     align-items:baseline;
     justify-content: center;
-    margin-bottom:90px;
+    margin-bottom:220px;
 
 }
 .nsol{
@@ -183,17 +231,52 @@ animation-delay: 0s;
     animation-delay: 12s;
 }
 
+.title-portada{
+    text-align: center;
+    color:rgb(251, 252, 255);
+    font-weight: 600;
+    font-size:2em;
+    max-width: 300px;
+    
+    flex-wrap: wrap;
+}
+.parentesis-title-portada{
+    display:block;
+    font-size: .5em;
+    color:rgb(251, 252, 255);
+    
+}
+.title-portada::after{
+    content: "";
+    display: block;
+    width:fit-content(100%);
+    height: 3px;
+    background-color: rgb(66, 66, 181);
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.fa-square-check{
+    scale:.7;
+    margin-right:.3em;
+    color:#5a89ef
+}
+.content-markers-portada{
+    font-size:1.4em;
+}
 .slide-text {
     position: absolute;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     opacity: 0;
     transform: translateX(-50%);
     color: white;
-    font-size: 2.2vw;
     z-index: 2;
-    text-align: center;
+    margin-top: 40px;
     animation: textFade 18s infinite;
     left:50%;
 }
+
 .t1{
     animation-delay:0s;
 }
@@ -256,7 +339,7 @@ animation-delay: 0s;
     opacity: 1;
     transform: translateY(0);
 }
-ul li::marker{
+ul .marker-somos::marker{
     content:'✅  ';
 }
 span{
@@ -391,6 +474,9 @@ h2{
     font-weight: 600;
     text-align: center;
     max-width: 70%;
+}
+.lista-servicio{
+    margin-left:50px;
 }
 
 /* ----------mini_seccion galeria----------- */
@@ -628,8 +714,8 @@ input::placeholder, textarea::placeholder{
     0%   { transform: translateX(0);
     -webkit-transform: translateX(0) }
 
-    100%  { transform: translateX(calc(-200px * 7));
-    -webkit-transform: translateX(calc(-200px * 7)); }
+    100%  { transform: translateX(calc(-200px * 9));
+    -webkit-transform: translateX(calc(-200px * 9)); }
     }
 
     .galeria-servicios{
@@ -653,12 +739,27 @@ input::placeholder, textarea::placeholder{
     height: 200px;
   }
   .slide-text {
-    font-size: 7vw;
+    font-size: 2.7vw;
     margin-top:7px;
     width: 80%;
     }
     .content-servicio img{
         max-width: 150px;
+    }
+    .nav-arrow {
+    top: 50%;
+    padding: 5px;
+    scale:.7;
+    }
+    .nav-arrow:hover {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .nav-arrow.prev1 {
+        left: -10px;
+    }
+
+    .nav-arrow.next1  {
+        right: -10px;
     }
 }
 
@@ -671,6 +772,9 @@ input::placeholder, textarea::placeholder{
     }
     .i{
         width: 10vw;
+    }
+    .slide-text {
+    font-size: 3.5vw;
     }
     .somos-texto{
         font-size: 1em;

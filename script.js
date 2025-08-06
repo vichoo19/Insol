@@ -29,6 +29,102 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// -----------------PASAR PORTADA--------------------------
+let currentIndex = 0;
+let autoResumeTimeout;
+const slides = document.querySelectorAll('.slide');
+const texts = document.querySelectorAll('.slide-text');
+const total = slides.length;
+
+function stopAutomaticAnimation() {
+    // Desactivar animaciones CSS
+    slides.forEach(slide => slide.classList.add('manual-slide'));
+    texts.forEach(text => text.classList.add('manual-text'));
+
+    // Cancelar animaciones activas
+    slides.forEach(slide => slide.style.animation = 'none');
+    texts.forEach(text => text.style.animation = 'none');
+}
+
+function showManualSlide(index) {
+    stopAutomaticAnimation();
+
+    // Ocultar todos
+    slides.forEach((slide, i) => slide.classList.remove('active'));
+    texts.forEach((text, i) => text.classList.remove('active'));
+
+    // Mostrar solo el actual
+    slides[index].classList.add('active');
+    texts[index].classList.add('active');
+
+    resetAutoAnimation();
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % total;
+    showManualSlide(currentIndex);
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + total) % total;
+    showManualSlide(currentIndex);
+}
+
+function resetAutoAnimation() {
+    clearTimeout(autoResumeTimeout);
+    autoResumeTimeout = setTimeout(() => {
+        resumeAutomaticAnimation();
+    }, 6000); // 6 segundos después de la última interacción
+}
+
+function resumeAutomaticAnimation() {
+    // Eliminar clases manuales
+    slides.forEach(slide => {
+        slide.classList.remove('manual-slide', 'active');
+        slide.style.animation = '';
+    });
+
+    texts.forEach(text => {
+        text.classList.remove('manual-text', 'active');
+        text.style.animation = '';
+    });
+
+    // Restaurar el index actual
+    currentIndex = 0;
+}
+// Variables para detección de gesto
+let touchStartX = 0;
+let touchEndX = 0;
+
+// Elemento donde se detecta el swipe
+const slider = document.getElementById("slider");
+
+// Escuchar inicio del gesto
+slider.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+}, false);
+
+// Escuchar fin del gesto
+slider.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipeGesture();
+}, false);
+
+// Lógica del swipe
+function handleSwipeGesture() {
+    const swipeDistance = touchEndX - touchStartX;
+
+    if (Math.abs(swipeDistance) < 50) return; // Ignorar swipes muy pequeños
+
+    if (swipeDistance < 0) {
+        // Deslizó hacia la izquierda → ir a la siguiente imagen
+        nextSlide();
+    } else {
+        // Deslizó hacia la derecha → ir a la anterior
+        prevSlide();
+    }
+}
 // ---------------------QUITAR CHEK MARA MENU-----------------
 document.addEventListener("DOMContentLoaded", function () {
         const navLinks = document.querySelectorAll(".nav-link");
@@ -68,7 +164,7 @@ window.addEventListener('DOMContentLoaded',() => {
 
 // ---------------------ANIMACION MOSTRAR SERVICIOS-----------------
 function mostrarServicio(num) {
-    for (let i = 1; i <= 4; i++) {
+    for (let i = 1; i <= 5; i++) {
         document.getElementById('servicio' + i).style.display = (i === num) ? 'block' : 'none';
         document.getElementById('fotos' + i).style.display = (i === num) ? 'block' : 'none';
     }
