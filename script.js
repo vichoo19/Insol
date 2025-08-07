@@ -170,10 +170,10 @@ function mostrarServicio(num) {
     }
 }
 // ---------------------BOTONES SERVICIOS-----------------
-for (let i = 1; i <= 4; i++) {
+for (let i = 1; i <= 5; i++) {
     const botonToggle = document.getElementById('boton-toggle' + i);
     botonToggle.addEventListener('click', () => {
-        for (let j = 1; j <= 4; j++) {
+        for (let j = 1; j <= 5; j++) {
             const otroBoton = document.getElementById('boton-toggle' + j);
             if (j !== i) {
                 otroBoton.classList.remove('active');

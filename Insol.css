@@ -18,6 +18,7 @@ html{
     color:rgb(0, 0, 0);
     overflow-x: hidden;
     width: 100vw;
+    scroll-behavior: smooth;
 }
 header{
     width: 100vw;
@@ -32,7 +33,7 @@ h1::after{
     display: block;
     width:fit-content(100%);
     height: 3px;
-    background-color: rgb(66, 66, 181);
+    background-color: rgb(47, 47, 129);
     margin: 0 auto;
     margin-bottom: 10px;
 }
@@ -40,6 +41,13 @@ h1{
     font-size: 2.3em;
     color:rgb(16, 16, 16);
     text-align: center;
+    
+}
+.title-portada, h1{
+    font-family: 'Lexend Deca', sans-serif;
+}
+.somos-texto, .texto-servicio p ,.content-markers-portada, .servicios-botones button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif ;;
 }
 /*-------------------nav_bar--------------------*/
 nav{
@@ -48,7 +56,7 @@ nav{
     width: 100%;
     justify-content: space-between;
     align-items: center;       
-    min-height: 7%;
+    height: 7%;
     z-index: 4;
     transition:all 0.3s ease
 }
@@ -251,14 +259,14 @@ animation-delay: 0s;
     display: block;
     width:fit-content(100%);
     height: 3px;
-    background-color: rgb(66, 66, 181);
+    background-color: rgb(90, 137, 239);
     margin: 0 auto;
     margin-bottom: 10px;
 }
 .fa-square-check{
     scale:.7;
     margin-right:.3em;
-    color:#5a89ef
+    color:rgb(90, 137, 239);
 }
 .content-markers-portada{
     font-size:1.4em;
@@ -312,6 +320,7 @@ animation-delay: 0s;
     margin-top: 3vh;
     background-color: rgb(211, 214, 222);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    scroll-margin-top: 80px;
 }
 .somos-contenido{
     display: flex;
@@ -329,12 +338,12 @@ animation-delay: 0s;
 }
 .somos-texto{
     max-width: 730px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     text-align:justify;
     font-size: 1.2em;
     color: rgb(4, 3, 3);
-    margin:50px
+    margin:50px;
 }
+
 .visible{
     opacity: 1;
     transform: translateY(0);
@@ -347,10 +356,10 @@ span{
     font-weight: 600;
 }
 
-
-
 /*-----------seccion servicios-----------*/
-
+#servicios{
+    scroll-margin-top: 80px;
+}
 .servicios{
     width: 100vw;
     display: flex;
@@ -532,6 +541,7 @@ h2{
     display:flex;
     flex-direction: column;
     align-items: center;
+    scroll-margin-top: 80px;
 }
 .slider1{ 
     width:90vw;
@@ -571,6 +581,7 @@ h2{
     padding: 20px;
     background-color: rgb(211, 214, 222);
     justify-content:center;
+    scroll-margin-top: 80px;
 }
 legend{
     font-size: 20px;
@@ -652,6 +663,9 @@ input::placeholder, textarea::placeholder{
     .menu-toggle{
         display: block;
     }
+    nav{
+        height: 60px;
+    }
     .nav-links{
         display: flex;
         flex-direction: column;
@@ -662,16 +676,20 @@ input::placeholder, textarea::placeholder{
         height: 100vh;
         left:-100%;
         top:0%;
-        background:rgb(43, 62, 80);
+        background:rgb(42, 42, 116);
         text-align: center;
         transition: left 0.3s ease;
         padding: 10px;
+        
     }
     .nav-link{
         margin: 30px 0;
         font-size: 1.5em;
+        padding: 10px;
+        color:rgb(251, 251, 251);
+        border-radius: 10px;
+        position: relative;
     }
-  
     #check:checked ~ .nav-links{
         left: 0;
     }
@@ -782,7 +800,7 @@ input::placeholder, textarea::placeholder{
     }
     .servicios-botones button{
         width: 150px;
-        font-size: .8em;
+        font-size: .78em;
     }
     
     h1{

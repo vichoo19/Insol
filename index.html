@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Insol.css">
     <link rel="icon" href="i-logo.svg" type="image/svg+xml">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 
     <title>Insol</title>
 </head>
@@ -24,6 +27,7 @@
                 <div class="nav-links">
                     <a class="nav-link" href="#somos">Nosotros</a>
                     <a class="nav-link" href="#servicios">Servicios</a>
+                    <a class="nav-link" href="#empleadores">Clientes</a>
                     <a class="nav-link" href="#contacto">Contacto</a>
                 </div>
             </div>
@@ -76,13 +80,13 @@
                 <div class="slide s1"><img src="imagenes/img1.jpg" alt="im1"></div>
                 <div class="slide s2"><img src="imagenes/img2.jpg" alt="im2"></div>
                 <div class="slide s3"><img src="imagenes/img3.jpg" alt="im3"></div>
-                <a href="https://api.whatsapp.com/send?phone=56933765340&text=hola%20que%20tal" rel="noopener noreferrer" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp whatsapp-inicio"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=56933765340&text=Hola!%20Queria%20consultar%20por:" rel="noopener noreferrer" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp whatsapp-inicio"></i></a>
         </section>
 
 
 
          <section id="somos"> <!--seccion quienes somos-->
-            <h1 class="titulo-blanco">Quiénes somos</h1>
+            <h1 class="titulo-blanco">Nosotros</h1>
             <div class="somos-contenido">
                 <img src="imagenes/presentacion-foto.jpg" alt="" style="width:280px">
                 <div class="somos-texto">
@@ -109,7 +113,7 @@
                 <button onclick="mostrarServicio(2)" id="boton-toggle2">Gasfitería</button>
                 <button onclick="mostrarServicio(3)" id="boton-toggle3">Climatización</button>
                 <button onclick="mostrarServicio(4)" id="boton-toggle4">Redes de incendio</button>
-                <button onclick="mostrarServicio(5)" id="boton-toggle4">Serv. Personalizado</button>
+                <button onclick="mostrarServicio(5)" id="boton-toggle5">Serv. Personalizado</button>
             </div>
 
             <div id="servicio1" class="servicio-detalle" ">
@@ -161,13 +165,13 @@
                         <h2>Redes de incendio</h2>
                         <p>ofrecemos soluciones integrales en redes de incendio, diseñadas para proteger personas, bienes e infraestructuras ante emergencias. Nos encargamos de la diseño, instalación, mantención y certificación de sistemas de redes húmedas y secas, cumpliendo con las normativas nacionales e internacionales vigentes.</p>
                     </div>
-                    <img src="imagenes/sala_de_calderas-servicio.jpg" alt="Instalación de Aire"> 
+                    <img src="imagenes/red-incendio.jpg" alt="Instalación de Aire"> 
                 </div>
             </div>
 
             <div id="servicio5" class="servicio-detalle" style="display:none;">
                 <div class="fondo-oscuro-1"></div>
-                <img src="imagenes/SalaCaldera_fondo.jpg" alt="" class="fondo-servicio">
+                <img src="imagenes/ser-perso-fondo.jpg" alt="" class="fondo-servicio">
                 <div class="content-servicio">
                    <div class="texto-servicio">
                         <h2>Servicios personalizados</h2>
@@ -179,7 +183,7 @@
                             </div>
                         </p>
                     </div>
-                    <img src="imagenes/sala_de_calderas-servicio.jpg" alt="Instalación de Aire"> 
+                    <img src="imagenes/serv-perso.png" alt="Instalación de Aire"> 
                 </div>
             </div>
 
@@ -207,6 +211,9 @@
 
                 <div id="fotos4" class="fotos-servicios" style="display:none;">
                     fotos 4
+                </div>
+                <div id="fotos5" class="fotos-servicios" style="display:none;">
+                    fotos 5
                 </div>
 
 
@@ -250,8 +257,8 @@
             <h1>Contacto</h1>
             <div class="contacto-iconos">
                 <a href="mailto:contacto@insolspa.cl" class="link-contacto" target="_blank"><i class="fa-solid fa-envelope contacto-icono"></i>contacto@insolspa.cl</a>
-                <a href="https://api.whatsapp.com/send?phone=56933765340&text=hola%20que%20tal" target="_blank" class="link-contacto"><i class="fa-brands fa-whatsapp contacto-icono"></i>+56 9 3376 5340</a>
-                <a href="" class="link-contacto"><i class="fa-brands fa-facebook contacto-icono"></i>Insol.rodrigo</a>
+                <a href="https://api.whatsapp.com/send?phone=56933765340&text=Hola!%20Queria%20consultar%20por:" target="_blank" class="link-contacto"><i class="fa-brands fa-whatsapp contacto-icono"></i>+56 9 3376 5340</a>
+                <a href="https://www.tiktok.com/@insolspa_" class="link-contacto" target="_blank"><i class="fa-brands fa-tiktok"></i>InsolSPA</a>
             </div>
              <form action="https://formsubmit.co/contacto@insolspa.cl" method="POST"><!--REGISTRAR CORREO -->
                 <div class="input-group">
