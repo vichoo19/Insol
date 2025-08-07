@@ -495,6 +495,7 @@ h2{
     font-weight: 700;
     font-size: 1.3em;
     margin:0 0 8px 0;
+    text-align: center;
 }
 .galeria-contenedor-servicio{
     display: flex;
