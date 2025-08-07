@@ -93,6 +93,7 @@ function resumeAutomaticAnimation() {
     // Restaurar el index actual
     currentIndex = 0;
 }
+
 // Variables para detección de gesto
 let touchStartX = 0;
 let touchEndX = 0;
@@ -185,19 +186,82 @@ for (let i = 1; i <= 5; i++) {
 window.onload = function() {
     mostrarServicio(1);
 };
-// ---------------------LIHGTBOX-----------------
+// ---------------------LIHGTBOX--------------------------------------
 const galeriaImagenes = {
     soldadura: [
-    "imagenes/soldando.png",
-    "imagenes/gasfiteria-servicio.jpg",
-    "imagenes/climatizacion-servicio.jpg",
-    "imagenes/sala_de_calderas-servicio.jpg",
-    "imagenes/soldando2.jpg"
+        "imagenes_galeria/soldadura1.jpg",
+        "imagenes_galeria/soldadura2.jpg",
+        "imagenes_galeria/soldadura3.jpg",
+        "imagenes_galeria/soldadura4.jpg",
+        "imagenes_galeria/soldadura5.jpg",
+        "imagenes_galeria/soldadura6.jpg",
+        "imagenes_galeria/soldadura7.jpg",
+        "imagenes_galeria/soldadura8.jpg",
+        "imagenes_galeria/soldadura9.jpg",
+        "imagenes_galeria/soldadura10.jpg",
+        "imagenes_galeria/soldadura11.jpg",
+        "imagenes_galeria/soldadura12.jpg",
+        "imagenes_galeria/soldadura13.jpg",
+        "imagenes_galeria/soldadura14.jpg",
+        "imagenes_galeria/soldadura15.jpg",
+        "imagenes_galeria/soldadura16.jpg",
+        "imagenes_galeria/soldadura17.jpg",
+        "imagenes_galeria/soldadura18.jpg",
+        "imagenes_galeria/soldadura19.jpg",
+        "imagenes_galeria/soldadura20.jpg"
     ],
 
-    gasfiteria: 
-    ["imagenes/gasfiteria1.jpg",
-    "imagenes/gasfiteria2.jpg",]
+    gasfiteria: [
+        "imagenes_galeria/gasfiteria1.jpg",
+        "imagenes_galeria/gasfiteria2.jpg",
+        "imagenes_galeria/gasfiteria3.jpg",
+        "imagenes_galeria/gasfiteria4.jpg",
+        "imagenes_galeria/gasfiteria5.jpg",
+        "imagenes_galeria/gasfiteria6.jpg",
+        "imagenes_galeria/gasfiteria7.jpg"
+    ],
+
+    climatizacion:[
+        "imagenes_galeria/climatizacion1.jpg",
+        "imagenes_galeria/climatizacion2.jpg",
+        "imagenes_galeria/climatizacion3.jpg",
+        "imagenes_galeria/climatizacion4.jpg",
+        "imagenes_galeria/climatizacion5.jpg",
+        "imagenes_galeria/climatizacion6.jpg",
+        "imagenes_galeria/climatizacion7.jpg",
+        "imagenes_galeria/climatizacion8.jpg",
+        "imagenes_galeria/climatizacion9.jpg",
+        "imagenes_galeria/climatizacion10.jpg",
+        "imagenes_galeria/climatizacion11.jpg",
+        "imagenes_galeria/climatizacion12.jpg",
+        "imagenes_galeria/climatizacion13.jpg",
+        "imagenes_galeria/climatizacion14.jpg",
+        "imagenes_galeria/climatizacion15.jpg",
+        "imagenes_galeria/climatizacion16.jpg",
+        "imagenes_galeria/climatizacion17.jpg",
+        "imagenes_galeria/climatizacion18.jpg"
+    ],
+
+    incendio:[
+        "imagenes_galeria/incendio1.jpg",
+        "imagenes_galeria/incendio2.jpg",
+        "imagenes_galeria/incendio3.jpg",
+        "imagenes_galeria/incendio4.jpg",
+        "imagenes_galeria/incendio5.jpg",
+        "imagenes_galeria/incendio6.jpg",
+        "imagenes_galeria/incendio7.jpg",
+        "imagenes_galeria/incendio8.jpg",
+        "imagenes_galeria/incendio9.jpg"
+    ],
+
+    personalizado:[
+        "imagenes_galeria/personalizado1.jpg",
+        "imagenes_galeria/personalizado2.jpg",
+        "imagenes_galeria/personalizado3.jpg",
+        "imagenes_galeria/personalizado4.jpg",
+        "imagenes_galeria/personalizado5.jpg",
+        "imagenes_galeria/personalizado6.jpg"
+    ]
 };
 
 let galeriaActual = null;
@@ -228,3 +292,34 @@ function actualizarImagen() {
   img.src = galeria[indiceActual];
 }
 
+
+
+
+// Elemento donde se detecta el swipe
+const lightbox = document.getElementById(".lightbox");
+
+// Escuchar inicio del gesto
+lightbox.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+}, false);
+
+// Escuchar fin del gesto
+lightbox.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipeGesture();
+}, false);
+
+// Lógica del swipe
+function handleSwipeGesture() {
+    const swipeDistance = touchEndX - touchStartX;
+
+    if (Math.abs(swipeDistance) < 50) return; // Ignorar swipes muy pequeños
+
+    if (swipeDistance < 0) {
+        // Deslizó hacia la izquierda → ir a la siguiente imagen
+        cambiarImagen(1)
+    } else {
+        // Deslizó hacia la derecha → ir a la anterior
+        cambiarImagen(-1);
+    }
+}

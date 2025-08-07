@@ -43,7 +43,7 @@ h1{
     text-align: center;
     
 }
-.title-portada, h1{
+.title-portada, h1,.title-galeria{
     font-family: 'Lexend Deca', sans-serif;
 }
 .somos-texto, .texto-servicio p ,.content-markers-portada, .servicios-botones button{
@@ -489,6 +489,13 @@ h2{
 }
 
 /* ----------mini_seccion galeria----------- */
+.title-galeria{
+    color: rgb(22, 23, 23);
+    justify-self: center;
+    font-weight: 700;
+    font-size: 1.3em;
+    margin:0 0 8px 0;
+}
 .galeria-contenedor-servicio{
     display: flex;
     flex-direction: row;
@@ -497,7 +504,7 @@ h2{
     align-items: center;
     gap: 16px;
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: 0px 10px;
 }
 
 .miniatura{
@@ -506,6 +513,10 @@ h2{
     height: 250px;
     object-fit:cover;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+.miniatura:hover{
+    scale:1.03;
 }
 .lightbox{
     display:none;
@@ -524,6 +535,7 @@ h2{
     max-width: 90%;
     max-height: 80vh;
     transition:transform 0.2s ease;
+    z-index: 51;
 }
 .cerrar, .prev, .next{
     color:white;
@@ -531,8 +543,9 @@ h2{
     position:absolute;
     cursor:pointer;
     user-select:none;
+    z-index: 51;
 }
-.cerrar{top:20px;right:30px;font-size:50px;}
+.cerrar{top:20px;right:30px;font-size:90px;}
 .prev{top:50%;left:30px;transform: translateY(-50%);}
 .next{top:50%;right:30px;transform: translateY(-50%);}
 
@@ -658,7 +671,7 @@ input::placeholder, textarea::placeholder{
         flex-wrap: wrap;
     }
     .content-servicio img{
-        max-width: 200px;
+        display: none;
     }
     .menu-toggle{
         display: block;
@@ -718,24 +731,7 @@ input::placeholder, textarea::placeholder{
         bottom:30px
     }
 }
-@media screen and (max-width: 600px) {
-    .slider1 .slide-track{
-    animation: scroll 20s linear infinite;
-    -webkit-animation: scroll 20s linear infinite;
-    width:calc(260px * 18);
-    }
-    .slider1 .slide1{
-    width: 200px;
-    padding-right: 20px;
-    }
-    @keyframes scroll{
-    0%   { transform: translateX(0);
-    -webkit-transform: translateX(0) }
-
-    100%  { transform: translateX(calc(-200px * 9));
-    -webkit-transform: translateX(calc(-200px * 9)); }
-    }
-
+@media screen and (max-width: 667px){
     .galeria-servicios{
         max-width: 100%;
     }
@@ -756,6 +752,34 @@ input::placeholder, textarea::placeholder{
     width: 35vw;
     height: 200px;
   }
+}
+
+@media screen and (max-width: 510px){
+    .servicios-botones button{
+        width: 150px;
+        font-size: .78em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slider1 .slide-track{
+    animation: scroll 20s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
+    width:calc(260px * 18);
+    }
+    .slider1 .slide1{
+    width: 200px;
+    padding-right: 20px;
+    }
+    @keyframes scroll{
+    0%   { transform: translateX(0);
+    -webkit-transform: translateX(0) }
+
+    100%  { transform: translateX(calc(-200px * 9));
+    -webkit-transform: translateX(calc(-200px * 9)); }
+    }
+
+    
   .slide-text {
     font-size: 2.7vw;
     margin-top:7px;
@@ -798,10 +822,7 @@ input::placeholder, textarea::placeholder{
         font-size: 1em;
         margin: 20px;
     }
-    .servicios-botones button{
-        width: 150px;
-        font-size: .78em;
-    }
+    
     
     h1{
         font-size: 1.8em;
