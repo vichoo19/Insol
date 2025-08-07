@@ -291,35 +291,3 @@ function actualizarImagen() {
   const img = document.getElementById('imagenAmpliada');
   img.src = galeria[indiceActual];
 }
-
-
-
-
-// Elemento donde se detecta el swipe
-const lightbox = document.getElementById(".lightbox");
-
-// Escuchar inicio del gesto
-lightbox.addEventListener('touchstart', e => {
-    touchStartX = e.changedTouches[0].screenX;
-}, false);
-
-// Escuchar fin del gesto
-lightbox.addEventListener('touchend', e => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipeGesture();
-}, false);
-
-// Lógica del swipe
-function handleSwipeGesture() {
-    const swipeDistance = touchEndX - touchStartX;
-
-    if (Math.abs(swipeDistance) < 50) return; // Ignorar swipes muy pequeños
-
-    if (swipeDistance < 0) {
-        // Deslizó hacia la izquierda → ir a la siguiente imagen
-        cambiarImagen(1)
-    } else {
-        // Deslizó hacia la derecha → ir a la anterior
-        cambiarImagen(-1);
-    }
-}

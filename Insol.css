@@ -731,6 +731,9 @@ input::placeholder, textarea::placeholder{
         width: 50px;
         bottom:30px
     }
+    .title-galeria{
+        font-size: .8em;
+    }
 }
 @media screen and (max-width: 667px){
     .galeria-servicios{
@@ -760,6 +763,10 @@ input::placeholder, textarea::placeholder{
         width: 150px;
         font-size: .78em;
     }
+    .servicios-botones{
+        margin-bottom: 10px;
+    }
+    
 }
 
 @media screen and (max-width: 600px) {
